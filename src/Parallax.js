@@ -17,7 +17,8 @@ class Parallax extends Component {
             </div>
             <div className="col-md-5">
               <div className="description text-center">
-                <h2>Showcase 2 - Your webapp</h2>
+                <h2>BibleQuote 7</h2>
+                <h5>Quote the Bible with confidence.</h5>
                 <br/>
                 <h5>This template was built closely to our current layout as of June 2016. You can download a free demo below. Please share the webpage with others. Hope this template makes a good preview of what we are building here!</h5>
                 <div className="buttons">

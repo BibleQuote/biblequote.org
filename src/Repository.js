@@ -91,15 +91,19 @@ class Repository extends Component {
 
     return (
       <div className="Repository">
-        <header className="Repository-header">
-          <h1 className="Repository-title">Репозиторий модулей BibleQuote</h1>
-        </header>
-        <div>
-          <input className="module-search" onChange={this.handleChange} />
-          <span>&nbsp;</span>
-          <span className="module-search-number">{filteredModules.length}</span>
+        <div className="parallax-small filter-gradient blue" data-color="blue">
         </div>
-        <div className="modules-list">
+        <div className="section section-clients">
+          <div className="container text-center">
+            <header className="Repository-header">
+              <h1 className="Repository-title">Репозиторий модулей BibleQuote</h1>
+            </header>
+            <div>
+              <input className="module-search" onChange={this.handleChange} />
+              <span>&nbsp;</span>
+              <span className="module-search-number">{filteredModules.length}</span>
+            </div>
+            <div className="modules-list">
           <ul>
             {
               filteredModules.map(module => (
@@ -119,6 +123,8 @@ class Repository extends Component {
               ))
             }
           </ul>
+        </div>
+          </div>
         </div>
       </div>
     );

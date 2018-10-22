@@ -32,7 +32,7 @@ class NavBar extends Component {
             <ul className="nav navbar-nav navbar-right">
               <li>
                 <Link to='/repository'>
-                  <i className="fa fa-facebook-square"></i>&nbsp;
+                  <i className="fa fa-book"></i>&nbsp;
                   Modules
                 </Link>
               </li>
