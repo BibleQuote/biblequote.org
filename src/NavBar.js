@@ -1,3 +1,4 @@
+import { Link } from 'react-router-dom';
 import React, { Component } from 'react';
 
 class NavBar extends Component {
@@ -16,26 +17,26 @@ class NavBar extends Component {
             <span className="icon-bar bar2"></span>
             <span className="icon-bar bar3"></span>
             </button>
-            <a href="http://www.creative-tim.com">
+            <Link to='/'>
               <div className="logo-container">
                 <div className="logo">
                   <img src="assets/img/new_logo.png" alt="Creative Tim Logo"/>
                 </div>
                 <div className="brand">
-                  Creative Tim
+                  BibleQuote
                 </div>
               </div>
-            </a>
+            </Link>
           </div>
           <div className="collapse navbar-collapse" id="example" >
             <ul className="nav navbar-nav navbar-right">
               <li>
-                <a href="#">
-                <i className="fa fa-facebook-square"></i>
-                Like
-                </a>
+                <Link to='/repository'>
+                  <i className="fa fa-facebook-square"></i>&nbsp;
+                  Modules
+                </Link>
               </li>
-              <li>
+              {/* <li>
                 <a href="#">
                 <i className="fa fa-twitter"></i>
                 Tweet
@@ -46,7 +47,7 @@ class NavBar extends Component {
                 <i className="fa fa-pinterest"></i>
                 Pin
                 </a>
-              </li>
+              </li> */}
             </ul>
           </div>
         </div>

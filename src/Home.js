@@ -1,4 +1,5 @@
 import React, { Component } from 'react';
+import Parallax from './Parallax';
 
 class Home extends Component {
   constructor(props) {
@@ -8,6 +9,7 @@ class Home extends Component {
   render() {
     return (
       <div className="Home">
+        <Parallax />
         <div className="section section-gray section-clients">
           <div className="container text-center">
             <h4 className="header-text">Happy Customers</h4>

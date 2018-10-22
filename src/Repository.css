@@ -2,26 +2,9 @@
   text-align: center;
 }
 
-.Repository-logo {
-  animation: App-logo-spin infinite 20s linear;
-  height: 80px;
-}
-
-.Repository-header {
-  background-color: #8f2020;
-  height: 30px;
-  padding: 20px;
-  color: white;
-}
-
 .Repository-title {
   font-size: 1.5em;
 }
-
-/* @keyframes Repository-logo-spin {
-  from { transform: rotate(0deg); }
-  to { transform: rotate(360deg); }
-} */
 
 * {margin: 0; padding: 0;}
 
@@ -29,35 +12,31 @@
   margin: 20px;
 }
 
-ul {
+.Repository ul {
   list-style-type: none;
   width: 100%;
 }
 
-li {
+.Repository li {
   padding: 10px;
   overflow: auto;
   text-align: left;
 }
 
-li:hover {
+.Repository li:hover {
   background: #eee;
   cursor: pointer;
 }
 
-li img {
+.Repository li img {
   float: left;
   width: 100px;
   margin: 0 15px 0 0;
 }
 
-li h3 {
-  font: 200 15px/1.5 Georgia, Times New Roman, serif;
-  font-weight: bold;
-}
-
-li p {
-  font: 200 15px/1.5 Georgia, Times New Roman, serif;
+.Repository p {
+  font-size: 15px;
+  line-height: 1;
 }
 
 .module-search {

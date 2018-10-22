@@ -105,7 +105,7 @@ class Repository extends Component {
               filteredModules.map(module => (
                 <li key={module.id}>
                   <img alt={module.id} src={`https://raw.githubusercontent.com/BibleQuote/BibleQuote-Modules/master/assets/${module.id}.jpg`} />
-                  <h3>{module.name}</h3>
+                  <p><strong>{module.name}</strong></p>
                   <p>{module.author}</p>
                   <p>{getModuleMetadata(module.id).type}</p>
                   <p>{getModuleMetadata(module.id).language}</p>

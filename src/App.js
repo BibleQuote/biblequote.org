@@ -1,8 +1,6 @@
 import React, { Component } from 'react';
-import Home from './Home';
 import Footer from './Footer';
 import NavBar from './NavBar';
-import Parallax from './Parallax';
 import './App.css';
 
 class App extends Component {
@@ -14,8 +12,7 @@ class App extends Component {
     return (
       <div className="App">
         <NavBar />
-        <Parallax />
-        <Home />
+        { this.props.children }
         <Footer />
       </div>
     );
