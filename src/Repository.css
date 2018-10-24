@@ -70,3 +70,8 @@
   border: 0;
   border-radius: 0;
 }
+
+.flex-center {
+  display: flex;
+  justify-content: center;
+}

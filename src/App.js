@@ -5,7 +5,7 @@ import './App.css';
 
 class App extends Component {
   constructor(props) {
-    super();
+    super(props);
   }
 
   render() {
