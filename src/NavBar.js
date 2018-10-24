@@ -20,7 +20,7 @@ class NavBar extends Component {
             <Link to='/'>
               <div className="logo-container">
                 <div className="logo">
-                  <img src="assets/img/new_logo.png" alt="Creative Tim Logo"/>
+                  <img src="assets/img/bq_logo.png" alt="Creative Tim Logo"/>
                 </div>
                 <div className="brand">
                   BibleQuote

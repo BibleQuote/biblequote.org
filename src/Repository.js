@@ -95,9 +95,6 @@ class Repository extends Component {
         </div>
         <div className="section section-clients">
           <div className="container text-center">
-            <header className="Repository-header">
-              <h1 className="Repository-title">Репозиторий модулей BibleQuote</h1>
-            </header>
             <div>
               <input className="module-search" onChange={this.handleChange} />
               <span>&nbsp;</span>

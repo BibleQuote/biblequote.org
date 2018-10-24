@@ -59,5 +59,14 @@
 
 /* Parallax overrides */
 .landing-page .parallax-small {
-  height: 80px;
+  height: 88px;
+}
+
+.logo-container .brand {
+  margin-top: 15px;
+}
+
+.logo-container .logo{
+  border: 0;
+  border-radius: 0;
 }
