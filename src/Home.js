@@ -59,7 +59,7 @@ class Home extends Component {
                 </div>
               </div>
               <div className="col-md-5 col-md-offset-1">
-                <h4 className="header-text">Beautiful colors</h4>
+                <h4 className="header-text">Рабочие области</h4>
                 <p>
                   Each color has a strong pigment and was chosen to make your design shine. Each component from our product can have one of these colors. Try on different combinations and be sure that everything works together.
                 </p>
@@ -71,7 +71,7 @@ class Home extends Component {
             <br/>
             <div className="row">
               <div className="col-md-5">
-                <h4 className="header-text">Pixel Perfect</h4>
+                <h4 className="header-text">Библиотека модулей</h4>
                 <p>
                   Each color has a strong pigment and was chosen to make your design shine. Each component from our product can have one of these colors. Try on different combinations and be sure that everything works together.
                 </p>
