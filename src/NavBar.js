@@ -1,5 +1,5 @@
 import React, { Component } from 'react';
-import { Link } from 'react-router-dom';
+import { NavLink } from 'react-router-dom';
 import './NavBar.css';
 
 class NavBar extends Component {
@@ -18,7 +18,7 @@ class NavBar extends Component {
             <span className="icon-bar bar2"></span>
             <span className="icon-bar bar3"></span>
             </button>
-            <Link to='/'>
+            <NavLink to='/'>
               <div className="logo-container">
                 <div className="logo">
                   <img src="assets/img/bq_logo.png" alt="Creative Tim Logo"/>
@@ -27,22 +27,22 @@ class NavBar extends Component {
                   BibleQuote
                 </div>
               </div>
-            </Link>
+            </NavLink>
           </div>
           <div className="modules-search-input">
             <div className="input-group">
               <input type="text" className="form-control" placeholder="Поиск модулей..."
-                aria-describedby="basic-addon" onChange={this.handleChange}/>
+                aria-describedby="basic-addon" onChange={this.props.handleChange}/>
               <span className="input-group-addon" id="basic-addon">43</span>
             </div>
           </div>
           <div className="collapse navbar-collapse" id="example" >
             <ul className="nav navbar-nav navbar-right">
               <li>
-                <Link to='/repository'>
+                <NavLink to='/repository'>
                   <i className="fa fa-book"></i>&nbsp;
                   Modules
-                </Link>
+                </NavLink>
               </li>
             </ul>
           </div>
