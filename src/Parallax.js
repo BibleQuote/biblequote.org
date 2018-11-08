@@ -1,8 +1,18 @@
+import ReactGA from 'react-ga';
 import React, { Component } from 'react';
 
 class Parallax extends Component {
   constructor(props) {
     super();
+
+    this.downloadClick = this.downloadClick.bind();
+  }
+
+  downloadClick() {
+    ReactGA.event({
+      category: 'Application',
+      action: 'Download'
+    });
   }
 
   render() {
@@ -22,8 +32,8 @@ class Parallax extends Component {
                 <br/>
                 <h5>This template was built closely to our current layout as of June 2016. You can download a free demo below. Please share the webpage with others. Hope this template makes a good preview of what we are building here!</h5>
                 <div className="buttons">
-                  <a href="http://www.creative-tim.com/product/awesome-landing-page" className="btn btn-fill btn-neutral">
-                  <i className="fa fa-download"></i> Download
+                  <a href="#" className="btn btn-fill btn-neutral" onClick={this.downloadClick}>
+                    <i className="fa fa-download"></i> Загрузить
                   </a>
                 </div>
               </div>

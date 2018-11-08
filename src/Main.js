@@ -5,7 +5,7 @@ import Repository from './Repository';
 
 class Main extends Component {
   constructor(props) {
-    super(props);
+    super();
   }
 
   render() {

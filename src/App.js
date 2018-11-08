@@ -1,3 +1,4 @@
+import ReactGA from 'react-ga';
 import React, { Component } from 'react';
 import Main from './Main';
 import Footer from './Footer';
@@ -11,6 +12,13 @@ class App extends Component {
       query: '',
     };
     this.handleChange = this.handleChange.bind(this);
+
+    this.initializeGA();
+  }
+
+  initializeGA() {
+    ReactGA.initialize('UA-128935379-1');
+    ReactGA.pageview('/');
   }
 
   handleChange(event) {

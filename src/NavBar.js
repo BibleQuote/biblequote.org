@@ -4,7 +4,7 @@ import './NavBar.css';
 
 class NavBar extends Component {
   constructor(props) {
-    super(props);
+    super();
   }
 
   render() {
