@@ -41,7 +41,7 @@ class NavBar extends Component {
               <li>
                 <NavLink to='/repository'>
                   <i className="fa fa-book"></i>&nbsp;
-                  Modules
+                  Модули
                 </NavLink>
               </li>
             </ul>

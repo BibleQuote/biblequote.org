@@ -1,4 +1,5 @@
 import React, { Component } from 'react';
+import { NavLink } from 'react-router-dom';
 
 class Footer extends Component {
   constructor(props) {
@@ -12,40 +13,15 @@ class Footer extends Component {
           <nav className="pull-left">
             <ul>
               <li>
-                <a href="#">
-                Home
-                </a>
+                <NavLink to='/'>Главная</NavLink>
               </li>
               <li>
-                <a href="#">
-                Company
-                </a>
-              </li>
-              <li>
-                <a href="#">
-                Portfolio
-                </a>
-              </li>
-              <li>
-                <a href="#">
-                Blog
-                </a>
+                <NavLink to='/repository'>Модули</NavLink>
               </li>
             </ul>
           </nav>
-          <div className="social-area pull-right">
-            <a className="btn btn-social btn-facebook btn-simple">
-            <i className="fa fa-facebook-square"></i>
-            </a>
-            <a className="btn btn-social btn-twitter btn-simple">
-            <i className="fa fa-twitter"></i>
-            </a>
-            <a className="btn btn-social btn-pinterest btn-simple">
-            <i className="fa fa-pinterest"></i>
-            </a>
-          </div>
           <div className="copyright">
-            &copy; 2016 <a href="http://www.creative-tim.com">Creative Tim</a>, made with love
+            &copy; 2017-2018 <a href="http://www.biblequote.org">BibleQuote.org</a>
           </div>
         </div>
       </footer>
