@@ -21,7 +21,7 @@ class NavBar extends Component {
             <NavLink to='/'>
               <div className="logo-container">
                 <div className="logo">
-                  <img src="assets/img/bq_logo.png" alt="Creative Tim Logo"/>
+                  <img src="assets/img/bq-logo.png" alt="Creative Tim Logo"/>
                 </div>
                 <div className="brand">
                   BibleQuote
@@ -29,13 +29,13 @@ class NavBar extends Component {
               </div>
             </NavLink>
           </div>
-          <div className="modules-search-input">
+          {/* <div className="modules-search-input">
             <div className="input-group">
               <input type="text" className="form-control" placeholder="Поиск модулей..."
                 aria-describedby="basic-addon" onChange={this.props.handleChange}/>
               <span className="input-group-addon" id="basic-addon">43</span>
             </div>
-          </div>
+          </div> */}
           <div className="collapse navbar-collapse" id="example" >
             <ul className="nav navbar-nav navbar-right">
               <li>

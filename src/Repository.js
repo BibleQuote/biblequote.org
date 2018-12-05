@@ -54,32 +54,32 @@ class Repository extends Component {
         </div>
         <div className="section section-clients">
           <div className="container text-center">
-            <div>
+            {/* <div>
               <input className="module-search" onChange={this.handleChange} />
               <span>&nbsp;</span>
               <span className="module-search-number">{filteredModules.length}</span>
-            </div>
+            </div> */}
             <div className="modules-list">
-          <ul>
-            {
-              filteredModules.map(module => (
-                <li key={module.id}>
-                  <img alt={module.id} src={`https://raw.githubusercontent.com/BibleQuote/BibleQuote-Modules/master/assets/${module.id}.jpg`} />
-                  <p><strong>{module.name}</strong></p>
-                  <p>{module.author}</p>
-                  <p>{getModuleMetadata(module.id).type}</p>
-                  <p>{getModuleMetadata(module.id).language}</p>
-                  <p>{getModuleMetadata(module.id).version}</p>
-                  <p>
-                    <a href={`https://raw.githubusercontent.com/BibleQuote/BibleQuote-Modules/master/modules/${module.id}.7z`} >
-                      Загрузить ({module.size})
-                    </a>
-                  </p>
-                </li>
-              ))
-            }
-          </ul>
-        </div>
+              <ul>
+                {
+                  filteredModules.map(module => (
+                    <li key={module.id}>
+                      <img alt={module.id} src={`https://raw.githubusercontent.com/BibleQuote/BibleQuote-Modules/master/assets/${module.id}.jpg`} />
+                      <p><strong>{module.name}</strong></p>
+                      <p>{module.author}</p>
+                      <p>{getModuleMetadata(module.id).type}</p>
+                      <p>{getModuleMetadata(module.id).language}</p>
+                      <p>{getModuleMetadata(module.id).version}</p>
+                      <p>
+                        <a href={`https://raw.githubusercontent.com/BibleQuote/BibleQuote-Modules/master/modules/${module.id}.7z`} >
+                          Загрузить ({module.size})
+                        </a>
+                      </p>
+                    </li>
+                  ))
+                }
+              </ul>
+            </div>
           </div>
         </div>
       </div>

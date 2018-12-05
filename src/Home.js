@@ -10,7 +10,7 @@ class Home extends Component {
     return (
       <div className="Home">
         <Parallax />
-        <div className="section section-gray section-clients">
+        {/* <div className="section section-gray section-clients">
           <div className="container text-center">
             <h4 className="header-text">Happy Customers</h4>
             <p>
@@ -27,8 +27,8 @@ class Home extends Component {
               </ul>
             </div>
           </div>
-        </div>
-        <div className="section section-presentation">
+        </div> */}
+        {/* <div className="section section-presentation">
           <div className="container">
             <div className="row">
               <div className="col-md-5 hidden-xs">
@@ -49,7 +49,7 @@ class Home extends Component {
               </div>
             </div>
           </div>
-      </div>
+        </div> */}
         <div className="section section-demo">
           <div className="container">
             <div className="row">
@@ -61,10 +61,10 @@ class Home extends Component {
               <div className="col-md-5 col-md-offset-1">
                 <h4 className="header-text">Рабочие области</h4>
                 <p>
-                  Each color has a strong pigment and was chosen to make your design shine. Each component from our product can have one of these colors. Try on different combinations and be sure that everything works together.
+                  Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur.
                 </p>
                 <p>
-                  PSD Custom focuses on conveying the attention of your users to the important parts of the page and the actions. While keeping a light feel, the colors give the page an extra push.
+                  Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur.
                 </p>
               </div>
             </div>
@@ -87,7 +87,7 @@ class Home extends Component {
             </div>
           </div>
         </div>
-        <div className="section section-features">
+        {/* <div className="section section-features">
           <div className="container">
             <h4 className="header-text text-center">Features</h4>
             <div className="row">
@@ -131,8 +131,8 @@ class Home extends Component {
               </div>
             </div>
           </div>
-        </div>
-        <div className="section section-testimonial">
+        </div> */}
+        {/* <div className="section section-testimonial">
           <div className="container">
             <h4 className="header-text text-center">What people think</h4>
             <div id="carousel-example-generic" className="carousel fade" data-ride="carousel">
@@ -172,16 +172,18 @@ class Home extends Component {
               </ol>
             </div>
           </div>
-        </div>
+        </div> */}
         <div className="section section-no-padding">
           <div className="parallax filter-gradient blue" data-color="blue">
             <div className="parallax-background">
               <img className="parallax-background-image" src="assets/img/showcases/showcase-2/bg2.jpg" />
             </div>
             <div className="info">
-              <h1>Download this landing page for free!</h1>
-              <p>Beautiful multipurpose bootstrap landing page.</p>
-              <a href="http://www.creative-tim.com/product/awesome-landing-page" className="btn btn-neutral btn-lg btn-fill">DOWNLOAD</a>
+              <h1>Версия 7.0.0</h1>
+              <p>Сборка 462</p>
+              <a href="#" className="btn btn-neutral btn-lg btn-fill">
+                <i className="fa fa-download"></i> Загрузить (64мб)
+              </a>
             </div>
           </div>
         </div>
