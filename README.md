@@ -1,2 +1,3 @@
 # biblequote.org
-biblequote.org website
+
+www.biblequote.org website
