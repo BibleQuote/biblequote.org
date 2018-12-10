@@ -105,7 +105,7 @@ class Home extends Component {
                 </div>
               </div>
               <div className="col-md-5 col-md-offset-1">
-                <h4 className="header-text">Исследование терминов</h4>
+                <h4 className="header-text">Словари</h4>
                 <p>
                   Программа позволяет исследовать термины Священного Писания используя еврейский и греческий лексикон Стронга, а также библейские словари и энциклопедии:
                 </p>
