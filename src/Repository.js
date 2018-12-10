@@ -51,7 +51,7 @@ class Repository extends Component {
                 <p>{getModuleMetadata(module.id).language}</p>
                 <p>{getModuleMetadata(module.id).version}</p>
                 <p>
-                  <a href={`https://raw.githubusercontent.com/BibleQuote/BibleQuote-Modules/master/modules/${module.id}.7z`} >
+                  <a href={`https://raw.githubusercontent.com/BibleQuote/BibleQuote-Modules/master/modules/${module.id}.zip`} >
                     Загрузить ({module.size})
                   </a>
                 </p>

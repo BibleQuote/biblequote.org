@@ -34,7 +34,7 @@ export default () => {
 
       const modules = modulesList.map(module => {
         const repoFile = repoData.find(file =>
-          (file.name.replace('.7z', '') === module.id)
+          (file.name.replace('.zip', '') === module.id)
         );
 
         if (repoFile) {
