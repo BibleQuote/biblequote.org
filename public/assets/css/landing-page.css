@@ -1166,7 +1166,7 @@ filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#de8e0009', e
     border-radius: 10px;
    }
 
-   .landing-page .section-demo .row:first-child{
+   .landing-page .section-demo .row:not(:last-child){
     margin-bottom: 100px;
    }
 

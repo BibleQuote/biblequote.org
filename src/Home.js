@@ -97,6 +97,28 @@ class Home extends Component {
                 </div>
               </div>
             </div>
+            <br/>
+            <div className="row">
+              <div className="col-md-6">
+                <div className="demo-image">
+                  <img src="assets/img/bq/3-strong.png" alt="" />
+                </div>
+              </div>
+              <div className="col-md-5 col-md-offset-1">
+                <h4 className="header-text">Исследование терминов</h4>
+                <p>
+                  Программа позволяет исследовать термины Священного Писания используя еврейский и греческий лексикон Стронга, а также библейские словари и энциклопедии:
+                </p>
+                <ul>
+                  <li>Библейская Энциклопедия Брокгауза</li>
+                  <li>Иллюстрированная библейская энциклопедия Архимандрита Никифора</li>
+                  <li>Большой Библейский словарь Уолтера Элуэлла</li>
+                </ul>
+                <p>
+                  Дополнительные словари можно загрузить из <Link to="/repository">репозитория</Link>.
+                </p>
+              </div>
+            </div>
           </div>
         </div>
         {/* <div className="section section-features">
@@ -188,7 +210,7 @@ class Home extends Component {
         <div name="download" className="section section-no-padding">
           <div className="parallax filter-gradient blue" data-color="blue">
             <div className="parallax-background">
-              <img className="parallax-background-image" src="assets/img/showcases/showcase-2/bg2.jpg" alt="bg2" />
+              <img className="parallax-background-image" src="assets/img/bq/bg2.jpg" alt="bg2" />
             </div>
             <div className="info">
               <h1>Версия 7.0.0</h1>
