@@ -1,3 +1,4 @@
+import { Link } from 'react-router-dom';
 import React, { Component } from 'react';
 import Parallax from './Parallax';
 
@@ -55,16 +56,22 @@ class Home extends Component {
             <div className="row">
               <div className="col-md-6">
                 <div className="demo-image">
-                  <img src="assets/img/showcases/showcase-2/examples/home_4.jpg" alt="" />
+                  <img src="assets/img/bq/1-workspaces.png" alt="" />
                 </div>
               </div>
               <div className="col-md-5 col-md-offset-1">
                 <h4 className="header-text">Рабочие области</h4>
                 <p>
-                  Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur.
+                  При помощи рабочих областей программа позволяет пользователю гибко настраивать графический интерфейс для выполнения различных задач:
                 </p>
+                <ul>
+                  <li>сравнение нескольких текстов Священного Писания</li>
+                  <li>чтение библейского текста и комментариев</li>
+                  <li>исследование библейских терминов</li>
+                  <li>подготовка проповедей</li>
+                </ul>
                 <p>
-                  Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur.
+                  Рабочие области, а также содержашиеся в них вкладки, возможно перемещать при помощи <a target="blank" href="https://ru.wikipedia.org/wiki/Drag-and-drop">drag-and-drop</a>.
                 </p>
               </div>
             </div>
@@ -73,15 +80,20 @@ class Home extends Component {
               <div className="col-md-5">
                 <h4 className="header-text">Библиотека модулей</h4>
                 <p>
-                  Each color has a strong pigment and was chosen to make your design shine. Each component from our product can have one of these colors. Try on different combinations and be sure that everything works together.
+                  Библиотека модулей содержит источники информации доступные в программе и предназначена для быстрого поиска и открытия необходимых пользователю ресурсов. Библиотека отображает модули трех типов:
                 </p>
+                <ul>
+                  <li>Переводы Священного Писания</li>
+                  <li>Комментарии</li>
+                  <li>Книги</li>
+                </ul>
                 <p>
-                  PSD Custom focuses on conveying the attention of your users to the important parts of the page and the actions. While keeping a light feel, the colors give the page an extra push.
+                  Библиотеку можно расщирять, загрузив необходимые модули из <Link to="/repository">Репозитория модулей</Link>.
                 </p>
               </div>
               <div className="col-md-6 col-md-offset-1">
                 <div className="demo-image">
-                  <img src="assets/img/showcases/showcase-2/examples/home_6.jpg" alt="" />
+                  <img src="assets/img/bq/2-library.png" alt="" />
                 </div>
               </div>
             </div>
@@ -173,7 +185,7 @@ class Home extends Component {
             </div>
           </div>
         </div> */}
-        <div className="section section-no-padding">
+        <div name="download" className="section section-no-padding">
           <div className="parallax filter-gradient blue" data-color="blue">
             <div className="parallax-background">
               <img className="parallax-background-image" src="assets/img/showcases/showcase-2/bg2.jpg" />

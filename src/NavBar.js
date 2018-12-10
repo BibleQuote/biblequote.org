@@ -1,5 +1,5 @@
 import React, { Component } from 'react';
-import { NavLink } from 'react-router-dom';
+import { NavLink, Link } from 'react-router-dom';
 import './NavBar.css';
 
 class NavBar extends Component {
@@ -21,7 +21,7 @@ class NavBar extends Component {
             <NavLink to='/'>
               <div className="logo-container">
                 <div className="logo">
-                  <img src="assets/img/bq-logo.png" alt="Creative Tim Logo"/>
+                  <img src="assets/img/bq/logo.png" alt="BibleQuote Logo"/>
                 </div>
                 <div className="brand">
                   BibleQuote
@@ -39,7 +39,7 @@ class NavBar extends Component {
           <div className="collapse navbar-collapse" id="example" >
             <ul className="nav navbar-nav navbar-right">
               <li>
-                <NavLink to='/repository'>
+                <NavLink to="/repository">
                   <i className="fa fa-book"></i>&nbsp;
                   Модули
                 </NavLink>

@@ -22,16 +22,16 @@ class Parallax extends Component {
           <div className="row">
             <div className="col-md-7  hidden-xs">
               <div className="parallax-image">
-                <img src="assets/img/showcases/showcase-2/mac1.png"/>
+                <img src="assets/img/bq/0-main.png"/>
               </div>
             </div>
             <div className="col-md-5">
               <div className="description text-center">
-                <h2>BibleQuote 7</h2>
-                <h5>Цитируй Библию уверенно.</h5>
+                <h2>BibleQuote</h2>
+                <h5>Quote the Bible with confidence.</h5>
                 <br/>
                 <h5>
-                  Программа BibleQuote пользуется популярностью среди христиан, особенно для быстрого поиска и цитирования библейских стихов, а также она имеет уникальную возможность для сравнения текстов разных переводов Библии.
+                  Программа BibleQuote представляет собой инструмент для исследования текстов Священного Писания, чтения литературы, поиска и анализа библейских терминов, составления проповедей, а также запоминания библейских стихов.
                 </h5>
                 {/* <div className="buttons">
                   <a href="#" className="btn btn-fill btn-neutral" onClick={this.downloadClick}>
