@@ -71,6 +71,10 @@
   border-radius: 0;
 }
 
+.modules-search-input {
+  margin: 20px auto;
+}
+
 /* .flex-center {
   display: flex;
   justify-content: center;

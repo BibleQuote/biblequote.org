@@ -12,7 +12,7 @@ class Main extends Component {
     return (
       <Switch>
         <Route exact path="/" component={Home} />
-        <Route path='/repository' render={() => <Repository {...this.props} />}/>
+        <Route path='/repository' component={Repository} />}/>
         <Redirect to="/" />
       </Switch>
     );

@@ -1,6 +1,5 @@
 import React, { Component } from 'react';
 import { NavLink } from 'react-router-dom';
-import './NavBar.css';
 
 class NavBar extends Component {
   constructor(props) {
@@ -29,13 +28,6 @@ class NavBar extends Component {
               </div>
             </NavLink>
           </div>
-          {/* <div className="modules-search-input">
-            <div className="input-group">
-              <input type="text" className="form-control" placeholder="Поиск модулей..."
-                aria-describedby="basic-addon" onChange={this.props.handleChange}/>
-              <span className="input-group-addon" id="basic-addon">43</span>
-            </div>
-          </div> */}
           <div className="collapse navbar-collapse" id="example" >
             <ul className="nav navbar-nav navbar-right">
               <li>
