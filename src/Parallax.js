@@ -11,7 +11,7 @@ class Parallax extends Component {
   downloadClick() {
     ReactGA.event({
       category: 'Application',
-      action: 'Download'
+      action: 'Download',
     });
   }
 
@@ -27,7 +27,7 @@ class Parallax extends Component {
             </div>
             <div className="col-md-5">
               <div className="description text-center">
-                <h2>BibleQuote</h2>
+                <h2>BibleQuote 7</h2>
                 <h5>Quote the Bible with confidence.</h5>
                 <br/>
                 <h5>
