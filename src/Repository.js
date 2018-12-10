@@ -1,4 +1,5 @@
 import React, { Component } from 'react';
+import Loader from 'react-loader-spinner';
 import getModuleMetadata from './code/get-module-metadata';
 import fetchModulesFromGithub from './code/fetch-modules-from-github';
 import './Repository.css';
@@ -31,6 +32,30 @@ class Repository extends Component {
       });
   }
 
+  getModulesList(filteredModules) {
+    return (<div className="modules-list">
+      <ul>
+        {
+          filteredModules.map(module => (
+            <li key={module.id}>
+              <img alt={module.id} src={`https://raw.githubusercontent.com/BibleQuote/BibleQuote-Modules/master/assets/${module.id}.jpg`} />
+              <p><strong>{module.name}</strong></p>
+              <p>{module.author}</p>
+              <p>{getModuleMetadata(module.id).type}</p>
+              <p>{getModuleMetadata(module.id).language}</p>
+              <p>{getModuleMetadata(module.id).version}</p>
+              <p>
+                <a href={`https://raw.githubusercontent.com/BibleQuote/BibleQuote-Modules/master/modules/${module.id}.7z`} >
+                  Загрузить ({module.size})
+                </a>
+              </p>
+            </li>
+          ))
+        }
+      </ul>
+    </div>);
+  }
+
   render() {
     const { modules } = this.state;
     let filteredModules = [ ...modules ];
@@ -41,7 +66,6 @@ class Repository extends Component {
         const query = this.props.query.toLowerCase();
         const name = module.name.toLowerCase();
         const author = module.author.toLowerCase();
-
         if (name.includes(query) || author.includes(query)) {
           filteredModules.push(module);
         }
@@ -59,27 +83,11 @@ class Repository extends Component {
               <span>&nbsp;</span>
               <span className="module-search-number">{filteredModules.length}</span>
             </div> */}
-            <div className="modules-list">
-              <ul>
-                {
-                  filteredModules.map(module => (
-                    <li key={module.id}>
-                      <img alt={module.id} src={`https://raw.githubusercontent.com/BibleQuote/BibleQuote-Modules/master/assets/${module.id}.jpg`} />
-                      <p><strong>{module.name}</strong></p>
-                      <p>{module.author}</p>
-                      <p>{getModuleMetadata(module.id).type}</p>
-                      <p>{getModuleMetadata(module.id).language}</p>
-                      <p>{getModuleMetadata(module.id).version}</p>
-                      <p>
-                        <a href={`https://raw.githubusercontent.com/BibleQuote/BibleQuote-Modules/master/modules/${module.id}.7z`} >
-                          Загрузить ({module.size})
-                        </a>
-                      </p>
-                    </li>
-                  ))
-                }
-              </ul>
-            </div>
+            {
+              filteredModules.length === 0
+              ? <Loader type="Oval" color="#6994A2" width="70" />
+              : this.getModulesList(filteredModules)
+            }
           </div>
         </div>
       </div>
