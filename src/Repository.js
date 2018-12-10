@@ -1,3 +1,4 @@
+import ReactGA from 'react-ga';
 import React, { Component } from 'react';
 import Loader from 'react-loader-spinner';
 import getModuleMetadata from './code/get-module-metadata';
@@ -14,6 +15,8 @@ class Repository extends Component {
       modules: [],
       loaded: false,
     };
+
+    ReactGA.pageview('/repository');
   }
 
   handleChange(event) {
