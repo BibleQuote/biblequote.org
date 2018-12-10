@@ -16,7 +16,13 @@ class Footer extends Component {
                 <NavLink to='/'>Главная</NavLink>
               </li>
               <li>
-                <NavLink to='/repository'>Модули</NavLink>
+                <a href='/#features'>Возможности</a>
+              </li>
+              <li>
+                <a href='/#download'>Загрузка</a>
+              </li>
+              <li>
+                <NavLink to='/repository'>Репозиторий</NavLink>
               </li>
             </ul>
           </nav>

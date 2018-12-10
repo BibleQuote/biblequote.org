@@ -39,9 +39,18 @@ class NavBar extends Component {
           <div className="collapse navbar-collapse" id="example" >
             <ul className="nav navbar-nav navbar-right">
               <li>
+                <a href="/#features">
+                  <i className="fa fa-list-ol"></i>&nbsp;Возможности
+                </a>
+              </li>
+              <li>
+                <a href="/#download">
+                  <i className="fa fa-download"></i>&nbsp;Загрузка
+                </a>
+              </li>
+              <li>
                 <NavLink to="/repository">
-                  <i className="fa fa-book"></i>&nbsp;
-                  Модули
+                  <i className="fa fa-book"></i>&nbsp;Репозиторий
                 </NavLink>
               </li>
             </ul>

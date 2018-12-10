@@ -33,11 +33,11 @@ class Parallax extends Component {
                 <h5>
                   Программа BibleQuote представляет собой инструмент для исследования текстов Священного Писания, чтения литературы, поиска и анализа библейских терминов, составления проповедей, а также запоминания библейских стихов.
                 </h5>
-                {/* <div className="buttons">
-                  <a href="#" className="btn btn-fill btn-neutral" onClick={this.downloadClick}>
-                    <i className="fa fa-download"></i> Загрузить
+                <div className="buttons">
+                  <a href="/#download" className="btn btn-fill btn-neutral">
+                    <i className="fa fa-download"></i> Загрузка
                   </a>
-                </div> */}
+                </div>
               </div>
             </div>
           </div>

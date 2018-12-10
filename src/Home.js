@@ -51,7 +51,7 @@ class Home extends Component {
             </div>
           </div>
         </div> */}
-        <div className="section section-demo">
+        <div id="features" className="section section-demo">
           <div className="container">
             <div className="row">
               <div className="col-md-6">
@@ -207,7 +207,7 @@ class Home extends Component {
             </div>
           </div>
         </div> */}
-        <div name="download" className="section section-no-padding">
+        <div id="download" className="section section-no-padding">
           <div className="parallax filter-gradient blue" data-color="blue">
             <div className="parallax-background">
               <img className="parallax-background-image" src="assets/img/bq/bg2.jpg" alt="bg2" />
@@ -215,7 +215,7 @@ class Home extends Component {
             <div className="info">
               <h1>Версия 7.0.0</h1>
               <p>Сборка 462</p>
-              <a href="/" className="btn btn-neutral btn-lg btn-fill">
+              <a href="/" className="btn btn-neutral btn-lg btn-fill" onClick={this.downloadClick}>
                 <i className="fa fa-download"></i> Загрузить (64мб)
               </a>
             </div>
