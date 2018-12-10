@@ -13,7 +13,7 @@ class Footer extends Component {
           <nav className="pull-left">
             <ul>
               <li>
-                <NavLink to='/'>Главная</NavLink>
+                <a href='/'>Главная</a>
               </li>
               <li>
                 <a href='/#features'>Возможности</a>
