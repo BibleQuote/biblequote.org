@@ -1,0 +1,15 @@
+language: node_js
+node_js:
+  - "stable"
+script:
+  - npm run build
+deploy:
+  provider: pages
+  repo: BibleQuote/biblequote.github.io
+  local_dir: build
+  skip-cleanup: true
+  keep-history: true
+  github-token: $GITHUB_TOKEN
+  target-branch: master
+  on:
+    branch: master
