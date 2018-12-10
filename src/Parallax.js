@@ -1,20 +1,6 @@
-import ReactGA from 'react-ga';
 import React, { Component } from 'react';
 
 class Parallax extends Component {
-  constructor(props) {
-    super();
-
-    this.downloadClick = this.downloadClick.bind();
-  }
-
-  downloadClick() {
-    ReactGA.event({
-      category: 'Application',
-      action: 'Download',
-    });
-  }
-
   render() {
     return (
       <div className="parallax filter-gradient blue" data-color="blue">

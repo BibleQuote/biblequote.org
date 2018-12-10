@@ -1,3 +1,4 @@
+import ReactGA from 'react-ga';
 import { Link } from 'react-router-dom';
 import React, { Component } from 'react';
 import Parallax from './Parallax';
@@ -5,6 +6,12 @@ import Parallax from './Parallax';
 class Home extends Component {
   constructor(props) {
     super();
+    this.downloadClick = this.downloadClick.bind();
+  }
+
+  downloadClick() {
+    alert('Приложение в данный момент на стадии тестирования и скоро будет доступно для скачивания.');
+    ReactGA.event({ category: 'Application', action: 'Download' });
   }
 
   render() {
@@ -215,9 +222,9 @@ class Home extends Component {
             <div className="info">
               <h1>Версия 7.0.0</h1>
               <p>Сборка 462</p>
-              <a href="/" className="btn btn-neutral btn-lg btn-fill" onClick={this.downloadClick}>
-                <i className="fa fa-download"></i> Загрузить (64мб)
-              </a>
+              <Link to="/" className="btn btn-neutral btn-lg btn-fill" onClick={this.downloadClick}>
+                <i className="fa fa-download" /> Загрузить
+              </Link>
             </div>
           </div>
         </div>
