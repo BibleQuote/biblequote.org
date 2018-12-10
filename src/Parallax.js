@@ -22,7 +22,7 @@ class Parallax extends Component {
           <div className="row">
             <div className="col-md-7  hidden-xs">
               <div className="parallax-image">
-                <img src="assets/img/bq/0-main.png"/>
+                <img src="assets/img/bq/0-main.png" alt="Main screenshot" />
               </div>
             </div>
             <div className="col-md-5">

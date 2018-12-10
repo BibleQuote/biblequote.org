@@ -188,12 +188,12 @@ class Home extends Component {
         <div name="download" className="section section-no-padding">
           <div className="parallax filter-gradient blue" data-color="blue">
             <div className="parallax-background">
-              <img className="parallax-background-image" src="assets/img/showcases/showcase-2/bg2.jpg" />
+              <img className="parallax-background-image" src="assets/img/showcases/showcase-2/bg2.jpg" alt="bg2" />
             </div>
             <div className="info">
               <h1>Версия 7.0.0</h1>
               <p>Сборка 462</p>
-              <a href="#" className="btn btn-neutral btn-lg btn-fill">
+              <a href="/" className="btn btn-neutral btn-lg btn-fill">
                 <i className="fa fa-download"></i> Загрузить (64мб)
               </a>
             </div>

@@ -1,5 +1,5 @@
 import React, { Component } from 'react';
-import { NavLink, Link } from 'react-router-dom';
+import { NavLink } from 'react-router-dom';
 import './NavBar.css';
 
 class NavBar extends Component {
@@ -9,7 +9,7 @@ class NavBar extends Component {
 
   render() {
     return (
-      <nav className="navbar navbar-transparent navbar-top" role="navigation">
+      <div className="navbar navbar-transparent navbar-top" role="navigation">
         <div className="container flex-center">
           <div className="navbar-header">
             <button id="menu-toggle" type="button" className="navbar-toggle" data-toggle="collapse" data-target="#example">
@@ -47,7 +47,7 @@ class NavBar extends Component {
             </ul>
           </div>
         </div>
-      </nav>
+      </div>
     );
   }
 }
