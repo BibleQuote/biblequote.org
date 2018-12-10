@@ -11,7 +11,7 @@ class Repository extends Component {
 
     this.state = {
       query: '',
-      modules: {},
+      modules: [],
       loaded: false,
     };
   }
