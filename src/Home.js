@@ -2,6 +2,7 @@ import ReactGA from 'react-ga';
 import { Link } from 'react-router-dom';
 import React, { Component } from 'react';
 import Parallax from './Parallax';
+import ModalImage from 'react-modal-image'
 
 class Home extends Component {
   constructor(props) {
@@ -63,10 +64,16 @@ class Home extends Component {
             <div className="row">
               <div className="col-md-6">
                 <div className="demo-image">
-                  <img src="assets/img/bq/1-workspaces.png" alt="" />
+                  <ModalImage
+                    small={"assets/img/bq/1-workspaces.png"}
+                    medium={"assets/img/bq/1-workspaces.png"}
+                    alt="Рабочие области"
+                    hideDownload={true}
+                    hideZoom={true}
+                  />
                 </div>
               </div>
-              <div className="col-md-5 col-md-offset-1">
+              <div className="col-md-5 col-md-offset-1 info-text">
                 <h4 className="header-text">Рабочие области</h4>
                 <p>
                   При помощи рабочих областей программа позволяет пользователю гибко настраивать графический интерфейс для выполнения различных задач:
@@ -84,7 +91,7 @@ class Home extends Component {
             </div>
             <br/>
             <div className="row">
-              <div className="col-md-5">
+              <div className="col-md-5 info-text">
                 <h4 className="header-text">Библиотека модулей</h4>
                 <p>
                   Библиотека модулей содержит источники информации доступные в программе и предназначена для быстрого поиска и открытия необходимых пользователю ресурсов. Библиотека отображает модули трех типов:
@@ -100,7 +107,13 @@ class Home extends Component {
               </div>
               <div className="col-md-6 col-md-offset-1">
                 <div className="demo-image">
-                  <img src="assets/img/bq/2-library.png" alt="" />
+                  <ModalImage
+                    small={"assets/img/bq/2-library.png"}
+                    medium={"assets/img/bq/2-library.png"}
+                    alt="Библиотека модулей"
+                    hideDownload={true}
+                    hideZoom={true}
+                  />
                 </div>
               </div>
             </div>
@@ -108,10 +121,16 @@ class Home extends Component {
             <div className="row">
               <div className="col-md-6">
                 <div className="demo-image">
-                  <img src="assets/img/bq/3-strong.png" alt="" />
+                  <ModalImage
+                    small={"assets/img/bq/3-strong.png"}
+                    medium={"assets/img/bq/3-strong.png"}
+                    alt="Словари"
+                    hideDownload={true}
+                    hideZoom={true}
+                  />
                 </div>
               </div>
-              <div className="col-md-5 col-md-offset-1">
+              <div className="col-md-5 col-md-offset-1 info-text">
                 <h4 className="header-text">Словари</h4>
                 <p>
                   Программа позволяет исследовать термины Священного Писания используя еврейский и греческий лексикон Стронга, а также библейские словари и энциклопедии:
