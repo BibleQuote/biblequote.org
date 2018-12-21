@@ -12,7 +12,11 @@ class Home extends Component {
 
   downloadClick() {
     alert('Приложение в данный момент на стадии тестирования и скоро будет доступно для скачивания.');
-    ReactGA.event({ category: 'Application', action: 'Download' });
+    ReactGA.event({
+      category: 'Application',
+      action: 'Download',
+      label: 'QA', // TODO: Pass application version here
+    });
   }
 
   render() {

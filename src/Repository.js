@@ -9,6 +9,7 @@ class Repository extends Component {
   constructor(props) {
     super(props);
     this.handleChange = this.handleChange.bind(this);
+    this.downloadModuleClick = this.downloadModuleClick.bind();
 
     this.state = {
       query: '',
@@ -21,6 +22,14 @@ class Repository extends Component {
 
   handleChange(event) {
     this.setState({ query: event.target.value });
+  }
+
+  downloadModuleClick(moduleId) {
+    ReactGA.event({
+      category: 'Module',
+      action: 'Download',
+      label: moduleId,
+    });
   }
 
   componentWillMount() {
@@ -51,7 +60,8 @@ class Repository extends Component {
                 <p>{getModuleMetadata(module.id).language}</p>
                 <p>{getModuleMetadata(module.id).version}</p>
                 <p>
-                  <a href={`https://raw.githubusercontent.com/BibleQuote/BibleQuote-Modules/master/modules/${module.id}.zip`} >
+                  <a href={`https://raw.githubusercontent.com/BibleQuote/BibleQuote-Modules/master/modules/${module.id}.zip`}
+                    onClick={() => { this.downloadModuleClick(module.id)} } >
                     Загрузить ({module.size})
                   </a>
                 </p>
