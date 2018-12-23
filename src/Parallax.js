@@ -14,7 +14,7 @@ class Parallax extends Component {
             <div className="col-md-5">
               <div className="description text-center">
                 <h2>BibleQuote 7</h2>
-                <h5>Quote the Bible with confidence.</h5>
+                <h5>Цитируй Библию уверенно.</h5>
                 <br/>
                 <h5>
                   Программа BibleQuote представляет собой инструмент для исследования текстов Священного Писания, чтения литературы, поиска и анализа библейских терминов, составления проповедей, а также запоминания библейских стихов.

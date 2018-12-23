@@ -1,0 +1,15 @@
+{
+  "module": {
+    "type": {
+      "Bible": "Библия",
+      "Commentary": "Комментарий",
+      "Dictionary": "Словарь",
+      "Book": "Книга"
+    },
+    "language": {
+      "English": "Английский",
+      "Russian": "Русский",
+      "Ukrainian": "Украинский"
+    }
+  }
+}
