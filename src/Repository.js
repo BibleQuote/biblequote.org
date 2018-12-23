@@ -3,6 +3,7 @@ import React, { Component } from 'react';
 import Loader from 'react-loader-spinner';
 import getModuleMetadata from './code/get-module-metadata';
 import fetchModulesFromGithub from './code/fetch-modules-from-github';
+import russianLocale from './locale/russian';
 import './Repository.css';
 
 class Repository extends Component {
@@ -51,14 +52,17 @@ class Repository extends Component {
         </div>
         <ul>
           {
-            filteredModules.map(module => (
-              <li key={module.id}>
+            filteredModules.map(module => {
+              const moduleType = russianLocale['module']['type'];
+              const moduleLanguage = russianLocale['module']['language'];
+
+              return <li key={module.id}>
                 <img alt={module.id} src={`https://raw.githubusercontent.com/BibleQuote/BibleQuote-Modules/master/assets/${module.id}.jpg`} />
                 <p><strong>{module.name}</strong></p>
-                <p>{module.author}</p>
-                <p>{getModuleMetadata(module.id).type}</p>
-                <p>{getModuleMetadata(module.id).language}</p>
-                <p>{getModuleMetadata(module.id).version}</p>
+                <p>Автор: {module.author}</p>
+                <p>Тип: {moduleType[getModuleMetadata(module.id).type]}</p>
+                <p>Язык: {moduleLanguage[getModuleMetadata(module.id).language]}</p>
+                <p>Версия: {getModuleMetadata(module.id).version}</p>
                 <p>
                   <a href={`https://raw.githubusercontent.com/BibleQuote/BibleQuote-Modules/master/modules/${module.id}.zip`}
                     onClick={() => { this.downloadModuleClick(module.id)} } >
@@ -66,7 +70,7 @@ class Repository extends Component {
                   </a>
                 </p>
               </li>
-            ))
+            })
           }
         </ul>
         { filteredModules.length === 0 &&

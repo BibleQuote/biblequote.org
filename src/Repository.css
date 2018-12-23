@@ -24,13 +24,14 @@
 }
 
 .Repository li:hover {
-  background: #eee;
+  background: rgb(227, 241, 245);
   cursor: pointer;
 }
 
 .Repository li img {
   float: left;
   width: 100px;
+  height: 150px;
   margin: 0 15px 0 0;
 }
 
