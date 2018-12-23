@@ -126,8 +126,8 @@ class Home extends Component {
               <div className="col-md-6">
                 <div className="demo-image">
                   <ModalImage
-                    small={"assets/img/bq/3-strong.png"}
-                    medium={"assets/img/bq/3-strong.png"}
+                    small={"assets/img/bq/3-dictionaries.png"}
+                    medium={"assets/img/bq/3-dictionaries.png"}
                     alt="Словари"
                     hideDownload={true}
                     hideZoom={true}
@@ -244,7 +244,7 @@ class Home extends Component {
             </div>
             <div className="info">
               <h1>Версия 7.0.0</h1>
-              <p>Сборка 462</p>
+              <p>Сборка 538</p>
               <Link to="/" className="btn btn-neutral btn-lg btn-fill" onClick={this.downloadClick}>
                 <i className="fa fa-download" /> Загрузить
               </Link>
