@@ -65,6 +65,7 @@ class Home extends Component {
               <div className="col-md-6">
                 <div className="demo-image">
                   <ModalImage
+                    className="img-responsive"
                     small={"assets/img/bq/1-workspaces.png"}
                     medium={"assets/img/bq/1-workspaces.png"}
                     alt="Рабочие области"
@@ -91,7 +92,19 @@ class Home extends Component {
             </div>
             <br/>
             <div className="row">
-              <div className="col-md-5 info-text">
+              <div className="col-md-6 col-md-push-6">
+                <div className="demo-image">
+                  <ModalImage
+                    className="img-responsive"
+                    small={"assets/img/bq/2-library.png"}
+                    medium={"assets/img/bq/2-library.png"}
+                    alt="Библиотека модулей"
+                    hideDownload={true}
+                    hideZoom={true}
+                  />
+                </div>
+              </div>
+              <div className="col-md-5 col-md-pull-6 info-text">
                 <h4 className="header-text">Библиотека модулей</h4>
                 <p>
                   Библиотека модулей содержит источники информации доступные в программе и предназначена для быстрого поиска и открытия необходимых пользователю ресурсов. Библиотека отображает модули трех типов:
@@ -105,23 +118,13 @@ class Home extends Component {
                   Библиотеку можно расщирять, загрузив необходимые модули из <Link to="/repository">Репозитория модулей</Link>.
                 </p>
               </div>
-              <div className="col-md-6 col-md-offset-1">
-                <div className="demo-image">
-                  <ModalImage
-                    small={"assets/img/bq/2-library.png"}
-                    medium={"assets/img/bq/2-library.png"}
-                    alt="Библиотека модулей"
-                    hideDownload={true}
-                    hideZoom={true}
-                  />
-                </div>
-              </div>
             </div>
             <br/>
             <div className="row">
               <div className="col-md-6">
                 <div className="demo-image">
                   <ModalImage
+                    className="img-responsive"
                     small={"assets/img/bq/3-strong.png"}
                     medium={"assets/img/bq/3-strong.png"}
                     alt="Словари"
