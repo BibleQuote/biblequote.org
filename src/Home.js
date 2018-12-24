@@ -11,11 +11,10 @@ class Home extends Component {
   }
 
   downloadClick() {
-    alert('Приложение в данный момент на стадии тестирования и скоро будет доступно для скачивания.');
     ReactGA.event({
       category: 'Application',
       action: 'Download',
-      label: 'QA', // TODO: Pass application version here
+      label: 'Build 538',
     });
   }
 
@@ -245,9 +244,11 @@ class Home extends Component {
             <div className="info">
               <h1>Версия 7.0.0</h1>
               <p>Сборка 538</p>
-              <Link to="/" className="btn btn-neutral btn-lg btn-fill" onClick={this.downloadClick}>
+              <a href="https://github.com/BibleQuote/BibleQuote/releases/download/v7.0.0.538/BibleQuote_7.0.0.538.zip"
+                className="btn btn-neutral btn-lg btn-fill"
+                onClick={this.downloadClick}>
                 <i className="fa fa-download" /> Загрузить
-              </Link>
+              </a>
             </div>
           </div>
         </div>
