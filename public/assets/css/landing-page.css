@@ -701,18 +701,17 @@ a:focus, a:active {
   color: white;
   opacity: 1;
 }
-.border-top{
+.border-top {
   border-top: 1px solid #e2e2e2;
 }
 
-.parallax .parallax-image  {
+.parallax .parallax-image {
   width: 100%;
   position: relative;
   height: 100%;
-
 }
 
-.parallax .parallax-image.second-image{
+.parallax .parallax-image .second-image {
   position: absolute;
   right: -200px;
   top: 0;
@@ -1006,7 +1005,9 @@ a:focus, a:active {
 }
 .landing-page .parallax .parallax-image img{
   height: auto;
-  width: 100%;
+  width: auto;
+  max-height: 550px;
+  max-width: 100%;
 }
 
 .landing-page .parallax .parallax-image img.phone{
@@ -1152,7 +1153,7 @@ a:focus, a:active {
   margin-top: 50px;
 }
 
-.landing-page .section-demo a{
+.landing-page .section-demo p a{
   margin-top: 20px;
 }
 
@@ -1165,6 +1166,7 @@ a:focus, a:active {
 .landing-page .section-demo .demo-image img{
   width: auto;
   height: auto;
+  margin-top: 40px;
 }
 
 .landing-page .section-demo .row:not(:last-child){

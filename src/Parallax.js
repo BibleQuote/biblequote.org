@@ -6,7 +6,7 @@ class Parallax extends Component {
       <div className="parallax filter-gradient blue" data-color="blue">
         <div className= "container">
           <div className="row">
-            <div className="col-md-7  hidden-xs">
+            <div className="col-md-7 hidden-sm hidden-xs">
               <div className="parallax-image">
                 <img src="assets/img/bq/0-main.png" alt="Main screenshot" />
               </div>
