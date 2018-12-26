@@ -1,3 +1,3 @@
 # biblequote.org
 
-www.biblequote.org website
+BibleQuote 7 Official Website
