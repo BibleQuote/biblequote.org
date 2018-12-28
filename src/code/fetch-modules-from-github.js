@@ -1,3 +1,4 @@
+import ReactGA from 'react-ga';
 import formatBytes from './format-bytes';
 import parseIniData from './parse-ini-data';
 import convertModulesdataToList from './convert-modulesdata-to-list';
@@ -41,7 +42,11 @@ export default () => {
           return { ...module, size: formatBytes(repoFile.size) };
         }
         else {
-          console.error(`Deprecated module: ${module}`);
+          ReactGA.event({
+            category: 'Error',
+            action: 'Deprecated module',
+            label: module.id,
+          });
           return module;
         }
       });
