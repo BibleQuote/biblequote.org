@@ -36,14 +36,14 @@ class NavBar extends Component {
                 </a>
               </li>
               <li>
-                <NavLink to="/tutorial">
-                  <i className="fa fa-graduation-cap"></i>&nbsp;Видеоуроки
-                </NavLink>
-              </li>
-              <li>
                 <a href="/#download">
                   <i className="fa fa-download"></i>&nbsp;Загрузка
                 </a>
+              </li>
+              <li>
+                <NavLink to="/tutorial">
+                  <i className="fa fa-graduation-cap"></i>&nbsp;Видеоуроки
+                </NavLink>
               </li>
               <li>
                 <NavLink to="/repository">
