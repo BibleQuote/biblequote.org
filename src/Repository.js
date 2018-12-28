@@ -6,23 +6,33 @@ import fetchModulesFromGithub from './code/fetch-modules-from-github';
 import russianLocale from './locale/russian';
 import './Repository.css';
 
+const ModuleType = {
+  All: 'All',
+  Bible: 'Bible',
+  Commentary: 'Commentary',
+  Dictionary: 'Dictionary',
+  Book: 'Book',
+};
+
 class Repository extends Component {
   constructor(props) {
     super(props);
     this.handleChange = this.handleChange.bind(this);
-    this.downloadModuleClick = this.downloadModuleClick.bind();
+    this.dropdownClick = this.dropdownClick.bind(this);
+    this.downloadModuleClick = this.downloadModuleClick.bind(this);
 
     this.state = {
-      query: '',
       modules: [],
       loaded: false,
+      queryText: '',
+      queryModuleType: ModuleType.All,
     };
 
     ReactGA.pageview('/repository');
   }
 
   handleChange(event) {
-    this.setState({ query: event.target.value });
+    this.setState({ queryText: event.target.value });
   }
 
   downloadModuleClick(moduleId) {
@@ -33,6 +43,10 @@ class Repository extends Component {
     });
   }
 
+  dropdownClick(moduleType) {
+    this.setState({ queryModuleType: ModuleType[moduleType] });
+  }
+
   componentWillMount() {
     fetchModulesFromGithub()
       .then(modules => {
@@ -41,22 +55,48 @@ class Repository extends Component {
   }
 
   getModulesList(filteredModules) {
+    const moduleType = russianLocale['module']['type'];
+    const moduleLanguage = russianLocale['module']['language'];
+
     return (
-      <div className="modules-list">
+      <div className="repository-list">
         <div className="modules-search-input">
           <div className="input-group">
             <input type="text" className="form-control" onChange={this.handleChange}
               placeholder="Поиск модулей..." aria-describedby="basic-addon" />
-            <span className="input-group-addon" id="basic-addon">{filteredModules.length}</span>
+            <span className="input-group-addon" id="basic-addon">
+              {filteredModules.length}
+            </span>
+            <div className="input-group-btn">
+              <button type="button" className="btn btn-default dropdown-toggle" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                {moduleType[this.state.queryModuleType]} <span className="caret" />
+              </button>
+              { /* eslint-disable jsx-a11y/anchor-is-valid */ }
+              <ul className="dropdown-menu dropdown-menu-right">
+                <li>
+                  <a href="#" onClick={() => { this.dropdownClick(ModuleType.All)} }>Все модули</a>
+                </li>
+                <li>
+                  <a href="#" onClick={() => { this.dropdownClick(ModuleType.Bible)} }>Библия</a>
+                </li>
+                <li>
+                  <a href="#" onClick={() => { this.dropdownClick(ModuleType.Commentary)} }>Комментарий</a>
+                </li>
+                <li>
+                  <a href="#" onClick={() => { this.dropdownClick(ModuleType.Dictionary)} }>Словарь</a>
+                </li>
+                <li>
+                  <a href="#" onClick={() => { this.dropdownClick(ModuleType.Book)} }>Книга</a>
+                </li>
+              </ul>
+              { /* eslint-enable jsx-a11y/anchor-is-valid */ }
+            </div>
           </div>
         </div>
-        <ul>
+        <ul className="modules-list">
           {
-            filteredModules.map(module => {
-              const moduleType = russianLocale['module']['type'];
-              const moduleLanguage = russianLocale['module']['language'];
-
-              return <li key={module.id}>
+            filteredModules.map(module => (
+              <li key={module.id}>
                 <img alt={module.id} src={`https://raw.githubusercontent.com/BibleQuote/BibleQuote-Modules/master/assets/${module.id}.jpg`} />
                 <p><strong>{module.name}</strong></p>
                 <p>Автор: {module.author}</p>
@@ -70,10 +110,11 @@ class Repository extends Component {
                   </a>
                 </p>
               </li>
-            })
+            ))
           }
         </ul>
-        { filteredModules.length === 0 &&
+        {
+          filteredModules.length === 0 &&
           <div>Таких модулей в нашем репозитории нет.</div>
         }
       </div>
@@ -84,16 +125,26 @@ class Repository extends Component {
     const { modules } = this.state;
     let filteredModules = [ ...modules ];
 
-    if (this.state.query) {
+    // filter by query text
+    if (this.state.queryText) {
       filteredModules = [];
       modules.forEach(module => {
-        const query = this.state.query.toLowerCase();
+        const queryText = this.state.queryText.toLowerCase();
         const name = module.name.toLowerCase();
         const author = module.author.toLowerCase();
-        if (name.includes(query) || author.includes(query)) {
+        if (name.includes(queryText) || author.includes(queryText)) {
           filteredModules.push(module);
         }
       });
+    }
+
+    // filter by query module type
+    if (this.state.queryModuleType !== ModuleType.All) {
+      const queryModuleType = this.state.queryModuleType;
+
+      filteredModules = filteredModules.filter(module => (
+        getModuleMetadata(module.id).type === queryModuleType
+      ));
     }
 
     return (

@@ -1,6 +1,7 @@
 {
   "module": {
     "type": {
+      "All": "Все модули",
       "Bible": "Библия",
       "Commentary": "Комментарий",
       "Dictionary": "Словарь",

@@ -2,40 +2,36 @@
   text-align: center;
 }
 
-.Repository-title {
-  font-size: 1.5em;
-}
-
 * {margin: 0; padding: 0;}
 
-.modules-list {
+.repository-list {
   margin: 20px;
 }
 
-.Repository ul {
+.Repository .modules-list ul {
   list-style-type: none;
   width: 100%;
 }
 
-.Repository li {
+.Repository .modules-list li {
   padding: 10px;
   overflow: auto;
   text-align: left;
 }
 
-.Repository li:hover {
+.Repository .modules-list li:hover {
   background: rgb(227, 241, 245);
   cursor: pointer;
 }
 
-.Repository li img {
+.Repository .modules-list li img {
   float: left;
   width: 100px;
   height: 150px;
   margin: 0 15px 0 0;
 }
 
-.landing-page .section .modules-list p {
+.landing-page .section .repository-list p {
   margin-top: 0;
   line-height: 16px;
   font-size: 16px;
@@ -76,7 +72,7 @@
   margin: 20px auto;
 }
 
-/* .flex-center {
-  display: flex;
-  justify-content: center;
-} */
+.modules-search-input input {
+  height: 40px;
+  font-size: 15px;
+}
