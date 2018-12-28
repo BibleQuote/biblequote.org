@@ -13,3 +13,5 @@ deploy:
   target-branch: master
   on:
     branch: master
+after_failure:
+  - cat /home/travis/.npm/_logs/*-debug.log
