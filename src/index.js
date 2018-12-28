@@ -6,7 +6,7 @@ import App from './App';
 import { unregister as unregisterServiceWorker } from './registerServiceWorker';
 
 ReactDOM.render(
-  <BrowserRouter>
+  <BrowserRouter basename={process.env.PUBLIC_URL}>
     <App />
   </BrowserRouter>,
   document.getElementById('root')
