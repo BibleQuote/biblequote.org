@@ -27,7 +27,7 @@ class Footer extends Component {
             </ul>
           </nav>
           <div className="copyright">
-            &copy; 2017-2018 <a href="http://www.biblequote.org">BibleQuote.org</a>
+            &copy; 2017-2019 <a href="http://www.biblequote.org">BibleQuote.org</a>
           </div>
         </div>
       </footer>
