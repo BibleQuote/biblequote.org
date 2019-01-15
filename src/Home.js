@@ -14,7 +14,7 @@ class Home extends Component {
     ReactGA.event({
       category: 'Application',
       action: 'Download',
-      label: 'Build 538',
+      label: 'v7.0.1.546',
     });
   }
 
@@ -245,12 +245,12 @@ class Home extends Component {
               <img className="parallax-background-image" src="assets/img/bq/bg2.jpg" alt="bg2" />
             </div>
             <div className="info">
-              <h1>Версия 7.0.0</h1>
-              <p>Сборка 538</p>
-              <a href="https://github.com/BibleQuote/BibleQuote/releases/download/v7.0.0.538/BibleQuote_7.0.0.538.zip"
+              <h1>Версия 7.0.1</h1>
+              <p>Сборка 546</p>
+              <a href="https://github.com/BibleQuote/BibleQuote/releases/download/v7.0.1.546/BibleQuote_7.0.1.546.zip"
                 className="btn btn-neutral btn-lg btn-fill"
                 onClick={this.downloadClick}>
-                <i className="fa fa-download" /> Загрузить
+                <i className="fa fa-download" /> Загрузить (77.3 Мб)
               </a>
             </div>
           </div>
