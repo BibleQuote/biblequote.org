@@ -247,7 +247,7 @@ class Home extends Component {
             <div className="info">
               <h1>Версия 7.0.1</h1>
               <p>Сборка 546</p>
-              <a href="https://github.com/BibleQuote/BibleQuote/releases/download/v7.0.1.546/BibleQuote_7.0.1.546.zip"
+              <a href="https://s3.eu-west-2.amazonaws.com/biblequote/releases/BibleQuote_7.0.1.546.zip"
                 className="btn btn-neutral btn-lg btn-fill"
                 onClick={this.downloadClick}>
                 <i className="fa fa-download" /> Загрузить (77.3 Мб)
