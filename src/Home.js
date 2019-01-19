@@ -153,6 +153,52 @@ class Home extends Component {
             </div>
           </div>
         </div>
+        <div className="section section-features">
+          <div className="container">
+            <h4 className="header-text text-center">Контакты</h4>
+            <div className="row">
+              <div className="col-md-4">
+                <div className="card card-blue">
+                  <div className="icon">
+                    <i className="pe-7s-network"></i>
+                  </div>
+                  <div className="text">
+                    <h4>Facebook</h4>
+                    <p>
+                      <a href="https://www.facebook.com/groups/biblequote.interbiblia" target="blank">BibleQuote</a>
+                    </p>
+                  </div>
+                </div>
+              </div>
+              <div className="col-md-4">
+                <div className="card card-blue">
+                  <div className="icon">
+                    <i className="pe-7s-mail"></i>
+                  </div>
+                  <div className="text">
+                    <h4>Email:</h4>
+                    <p>
+                      <a href="mailto:biblequoteapp@gmail.com">biblequoteapp@gmail.com</a>
+                    </p>
+                  </div>
+                </div>
+              </div>
+              <div className="col-md-4">
+                <div className="card card-blue">
+                  <div className="icon">
+                    <i className="pe-7s-notebook"></i>
+                  </div>
+                  <div className="text">
+                    <h4>Богословский клуб Esxatos</h4>
+                    <p>
+                    <a href="http://www.esxatos.com/modbq" target="blank">Страница BibleQuote</a>
+                    </p>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
         {/* <div className="section section-features">
           <div className="container">
             <h4 className="header-text text-center">Features</h4>
