@@ -10,9 +10,16 @@ class Tutorial extends Component {
 
   render() {
     const videos = [
-      { videoId: 'AD2s5iUJPR4', title: 'Загрузка программы и дополнительных модулей' },
-      { videoId: 'QK5WwMsr6Gw', title: 'Настройка программы и рабочие области' },
-      { videoId: 'I4bXkeROFcU', title: 'Инструменты работы' },
+    //   { videoId: 'AD2s5iUJPR4', title: 'Загрузка программы и дополнительных модулей' },
+    //   { videoId: 'QK5WwMsr6Gw', title: 'Настройка программы и рабочие области' },
+    //   { videoId: 'I4bXkeROFcU', title: 'Инструменты работы' },
+    //   { videoId: 'TijHtYpUIuI', title: 'Личные заметки и распознавание библейских ссылок' },
+      { videoId: 'FaB5mLSYuwI', title: 'Библиотека' },
+      { videoId: 'HE3ni83OW9Q', title: 'Рабочие области' },
+      { videoId: 'TWo4ZaeIIfo', title: 'Словари' },
+      { videoId: 'L3JHUQx9bq4', title: 'Параллельные места' },
+      { videoId: '2IU6niVa0Oo', title: 'Лексиконы Стронга' },
+      { videoId: 'OE-GcRISKX4', title: 'Поиск и закладки' },
       { videoId: 'TijHtYpUIuI', title: 'Личные заметки и распознавание библейских ссылок' },
     ];
 
