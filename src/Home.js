@@ -4,6 +4,10 @@ import React, { Component } from 'react';
 import Parallax from './Parallax';
 import ModalImage from 'react-modal-image'
 
+const APP_VERSION = '7.1.0';
+const APP_BUILD = '624';
+const APP_SIZE = '105';
+
 class Home extends Component {
   constructor(props) {
     super();
@@ -14,11 +18,14 @@ class Home extends Component {
     ReactGA.event({
       category: 'Application',
       action: 'Download',
-      label: 'v7.0.1.546',
+      label: `v${APP_VERSION}.${APP_BUILD}`,
     });
   }
 
   render() {
+    const host = 'https://s3.eu-west-2.amazonaws.com';
+    const downloadUrl = `${host}/biblequote/releases/BibleQuote_${APP_VERSION}.${APP_BUILD}.zip`;
+
     return (
       <div className="Home">
         <Parallax />
@@ -110,11 +117,12 @@ class Home extends Component {
               <div className="col-md-5 col-md-pull-6 info-text">
                 <h4 className="header-text">Библиотека модулей</h4>
                 <p>
-                  Библиотека модулей содержит источники информации доступные в программе и предназначена для быстрого поиска и открытия необходимых пользователю ресурсов. Библиотека отображает модули трех типов:
+                  Библиотека модулей содержит источники информации доступные в программе и предназначена для быстрого поиска и открытия необходимых пользователю ресурсов. Библиотека отображает модули четырех типов:
                 </p>
                 <ul>
                   <li>Переводы Священного Писания</li>
-                  <li>Комментарии</li>
+                  <li>Комментарии к книгам Священного Писания</li>
+                  <li>Словари</li>
                   <li>Книги</li>
                 </ul>
                 <p>
@@ -147,7 +155,7 @@ class Home extends Component {
                   <li>Большой Библейский словарь Уолтера Элуэлла</li>
                 </ul>
                 <p>
-                  Дополнительные словари можно загрузить из <Link to="/repository">репозитория</Link>.
+                  В версии 7.1.0 появилась возможность открывать словари в формате <a href="https://mybible.zone/">MyBible</a>.
                 </p>
               </div>
             </div>
@@ -291,12 +299,12 @@ class Home extends Component {
               <img className="parallax-background-image" src="assets/img/bq/bg2.jpg" alt="bg2" />
             </div>
             <div className="info">
-              <h1>Версия 7.0.1</h1>
-              <p>Сборка 546</p>
-              <a href="https://s3.eu-west-2.amazonaws.com/biblequote/releases/BibleQuote_7.0.1.546.zip"
+              <h1>Версия {APP_VERSION}</h1>
+              <p>Сборка {APP_BUILD}</p>
+              <a href={downloadUrl}
                 className="btn btn-neutral btn-lg btn-fill"
                 onClick={this.downloadClick}>
-                <i className="fa fa-download" /> Загрузить (77.3 Мб)
+                <i className="fa fa-download" /> Загрузить ({APP_SIZE} Мб)
               </a>
             </div>
           </div>
