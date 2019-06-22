@@ -4,8 +4,8 @@ import React, { Component } from 'react';
 import Parallax from './Parallax';
 import ModalImage from 'react-modal-image'
 
-const APP_VERSION = '7.1.0';
-const APP_BUILD = '624';
+const APP_VERSION = '7.2.0';
+const APP_BUILD = '777';
 const APP_SIZE = '105';
 
 class Home extends Component {
@@ -92,11 +92,12 @@ class Home extends Component {
                 <ul>
                   <li>сравнение нескольких текстов Священного Писания</li>
                   <li>чтение библейского текста и комментариев</li>
-                  <li>исследование библейских терминов</li>
+                  <li>исследование библейских терминов при помощи словарей</li>
                   <li>подготовка проповедей</li>
+                  <li>запоминание библейских стихов</li>
                 </ul>
                 <p>
-                  Рабочие области, а также содержашиеся в них вкладки, возможно перемещать при помощи <a target="blank" href="https://ru.wikipedia.org/wiki/Drag-and-drop">drag-and-drop</a>.
+                  Рабочие области, а также содержащиеся в них вкладки, возможно перемещать при помощи <a target="blank" href="https://ru.wikipedia.org/wiki/Drag-and-drop">drag-and-drop</a>.
                 </p>
               </div>
             </div>
@@ -145,17 +146,20 @@ class Home extends Component {
                 </div>
               </div>
               <div className="col-md-5 col-md-offset-1 info-text">
-                <h4 className="header-text">Словари</h4>
+                <h4 className="header-text">Модули MyBible</h4>
                 <p>
-                  Программа позволяет исследовать термины Священного Писания используя еврейский и греческий лексикон Стронга, а также библейские словари и энциклопедии:
+                  Начиная с версии 7.1, в BibleQuote появилась возможность открывать словари в фомате <a href="https://mybible.zone/">MyBible</a>.
+                </p>
+                <p>
+                  В версии 7.2 эта возможность была обновлена и расширена и данный момент программа позволяет работать с модулями в формате <a href="https://mybible.zone/">MyBible</a> трех типов:
                 </p>
                 <ul>
-                  <li>Библейская Энциклопедия Брокгауза</li>
-                  <li>Иллюстрированная библейская энциклопедия Архимандрита Никифора</li>
-                  <li>Большой Библейский словарь Уолтера Элуэлла</li>
+                  <li>Переводы Священного Писания</li>
+                  <li>Комментарии</li>
+                  <li>Словари</li>
                 </ul>
                 <p>
-                  В версии 7.1.0 появилась возможность открывать словари в формате <a href="https://mybible.zone/">MyBible</a>.
+                  Также BibleQuote 7.2 позволяет загружать модули из <a href="https://mybible.zone/">Репозитория MyBible</a> напрямую из программы.
                 </p>
               </div>
             </div>

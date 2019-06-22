@@ -877,6 +877,10 @@ a:focus, a:active {
   line-height: 24px;
 }
 
+.info-text{
+  margin-top: 30px;
+}
+
 .info-text ul{
   margin-left: 30px;
   font-size: 16px;
@@ -1184,7 +1188,7 @@ a:focus, a:active {
 
 .landing-page .section-features .card{
   width: 100%;
-  min-height: 390px;
+  min-height: 230px;
   padding: 10px 30px;
   border: 1px solid #DDDDDD;
   border-radius: 10px;
