@@ -23,6 +23,7 @@ class Tutorial extends Component {
       { videoId: 'Q50DjTwl1Ec', 'title': 'Из чего состоит модуль - Часть 1' },
       { videoId: 'GvOl2dup98k', 'title': 'Из чего состоит модуль - Часть 2' },
       { videoId: 'GWpx-EaDvNk', 'title': 'Из чего состоит модуль - Словари' },
+      { videoId: 'Gg3dd8zPiOw', 'title': 'Как подключить аудиобиблию' },
     ];
 
     return (
