@@ -5,8 +5,8 @@ import Parallax from './Parallax';
 import ModalImage from 'react-modal-image'
 
 const APP_VERSION = '7.2.0';
-const APP_BUILD = '777';
-const APP_SIZE = '105';
+const APP_BUILD = '740';
+const APP_SIZE = '72';
 
 class Home extends Component {
   constructor(props) {
