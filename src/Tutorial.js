@@ -10,20 +10,21 @@ class Tutorial extends Component {
 
   render() {
     const videos = [
-      { videoId: 'YAgmBetFwM8', 'title': 'Библиотека' },
-      { videoId: 'j1xU_Bm_Yvk', 'title': 'Комментарии' },
-      { videoId: 'TVi7RacX79o', 'title': 'Словари' },
-      { videoId: 'gVenm4bdNTI', 'title': 'Лексикон Стронга' },
-      { videoId: 'gOU-jJUK7V0', 'title': 'Вкладки модулей' },
-      { videoId: 'HE3ni83OW9Q', 'title': 'Рабочие области' },
-      { videoId: 'L3JHUQx9bq4', 'title': 'Параллельные места' },
-      { videoId: 'OE-GcRISKX4', 'title': 'Поиск и закладки' },
-      { videoId: 'TijHtYpUIuI', 'title': 'Личные заметки и распознавание библейских ссылок' },
-      { videoId: 'AD2s5iUJPR4', 'title': 'Загрузка программы и дополнительных модулей' },
-      { videoId: 'Q50DjTwl1Ec', 'title': 'Из чего состоит модуль - Часть 1' },
-      { videoId: 'GvOl2dup98k', 'title': 'Из чего состоит модуль - Часть 2' },
-      { videoId: 'GWpx-EaDvNk', 'title': 'Из чего состоит модуль - Словари' },
-      { videoId: 'Gg3dd8zPiOw', 'title': 'Как подключить аудиобиблию' },
+      { videoId: 'gQGI8yUN-a0', 'title': 'Что нового в версии 7.2.0 - Часть 1' },
+      { videoId: '1f9Khi8rFfU', 'title': 'Что нового в версии 7.2.0 - Часть 2' },
+      { videoId: 'JbY6mj4rGzA', 'title': 'Настройка интерфейса' },
+      { videoId: 'TF_CrRPWcgo', 'title': 'Избранные модули' },
+      { videoId: 'NDP7ndhrREU', 'title': 'Библиотека' },
+      { videoId: 'YjLqFFEzgBM', 'title': 'Комментарии' },
+      { videoId: '8AG9BTV0S1w', 'title': 'Словари' },
+      { videoId: 'nZ7hp9Pcp5o', 'title': 'Лексикон Стронга' },
+      { videoId: 'ldH1xl-yyVE', 'title': 'Поиск' },
+      { videoId: '7snytd2jaow', 'title': 'Закладки' },
+      { videoId: 'seJFXqL5Zgc', 'title': 'Тематические закладки' },
+      { videoId: 'ytvG_Zsg7pU', 'title': 'Личные заметки' },
+      { videoId: 'ITSmI1TWIMM', 'title': 'Загрузка сторонних модулей' },
+      { videoId: 'CIS30PdygEo', 'title': 'Кнопки рабочей области' },
+      { videoId: '27H1xBYNSOw', 'title': 'Рабочие области' },
     ];
 
     return (
