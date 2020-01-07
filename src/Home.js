@@ -4,8 +4,8 @@ import React, { Component } from 'react';
 import Parallax from './Parallax';
 import ModalImage from 'react-modal-image'
 
-const APP_VERSION = '7.2.0';
-const APP_BUILD = '740';
+const APP_VERSION = '7.3.0';
+const APP_BUILD = '800';
 const APP_SIZE = '72';
 
 class Home extends Component {
@@ -23,8 +23,8 @@ class Home extends Component {
   }
 
   render() {
-    const host = 'https://s3.eu-west-2.amazonaws.com';
-    const downloadUrl = `${host}/biblequote/releases/BibleQuote_${APP_VERSION}.${APP_BUILD}.zip`;
+    const host = 'https://biblequote.sfo2.digitaloceanspaces.com';
+    const downloadUrl = `${host}/BibleQuote_${APP_VERSION}.${APP_BUILD}.zip`;
 
     return (
       <div className="Home">
@@ -151,7 +151,7 @@ class Home extends Component {
                   Начиная с версии 7.1, в BibleQuote появилась возможность открывать словари в фомате <a href="https://mybible.zone/">MyBible</a>.
                 </p>
                 <p>
-                  В версии 7.2 эта возможность была обновлена и расширена и данный момент программа позволяет работать с модулями в формате <a href="https://mybible.zone/">MyBible</a> трех типов:
+                  В версии 7.3 эта возможность была обновлена и расширена и данный момент программа позволяет работать с модулями в формате <a href="https://mybible.zone/">MyBible</a> трех типов:
                 </p>
                 <ul>
                   <li>Переводы Священного Писания</li>
@@ -159,7 +159,7 @@ class Home extends Component {
                   <li>Словари</li>
                 </ul>
                 <p>
-                  Также BibleQuote 7.2 позволяет загружать модули из <a href="https://mybible.zone/">Репозитория MyBible</a> напрямую из программы.
+                  Также BibleQuote 7.3 позволяет загружать модули из <a href="https://mybible.zone/">Репозитория MyBible</a> напрямую из программы.
                 </p>
               </div>
             </div>
