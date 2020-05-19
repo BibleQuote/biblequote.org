@@ -1,5 +1,5 @@
+import React, { useState, useEffect } from 'react';
 import ReactGA from 'react-ga';
-import React, { Component } from 'react';
 import Loader from 'react-loader-spinner';
 import getModuleMetadata from './code/get-module-metadata';
 import fetchModulesFromGithub from './code/fetch-modules-from-github';
@@ -14,47 +14,31 @@ const ModuleType = {
   Book: 'Book',
 };
 
-class Repository extends Component {
-  constructor(props) {
-    super(props);
-    this.handleChange = this.handleChange.bind(this);
-    this.dropdownClick = this.dropdownClick.bind(this);
-    this.downloadModuleClick = this.downloadModuleClick.bind(this);
+const Repository = () => {
+  const [modules, setModules] = useState([]);
+  const [loaded, setLoaded] = useState(false);
+  const [queryText, setQueryText] = useState('');
+  const [queryModuleType, setQueryModuleType] = useState(ModuleType.All);
 
-    this.state = {
-      modules: [],
-      loaded: false,
-      queryText: '',
-      queryModuleType: ModuleType.All,
-    };
-
+  useEffect(() => {
     ReactGA.pageview('/repository');
-  }
+  }, []);
 
-  handleChange(event) {
-    this.setState({ queryText: event.target.value });
-  }
-
-  downloadModuleClick(moduleId) {
-    ReactGA.event({
-      category: 'Module',
-      action: 'Download',
-      label: moduleId,
-    });
-  }
-
-  dropdownClick(moduleType) {
-    this.setState({ queryModuleType: ModuleType[moduleType] });
-  }
-
-  componentWillMount() {
+  useEffect(() => {
     fetchModulesFromGithub()
-      .then(modules => {
-        this.setState({ modules, loaded: true });
+      .then(fetchedModules => {
+        setModules(fetchedModules);
+        setLoaded(true);
       });
-  }
+  }, []);
 
-  getModulesList(filteredModules) {
+  const downloadModuleClick = moduleId => {
+    ReactGA.event({ category: 'Module', action: 'Download', label: moduleId });
+  };
+
+  const dropdownClick = moduleType => setQueryModuleType(ModuleType[moduleType]);
+
+  const getModulesList = filteredModules => {
     const moduleType = russianLocale['module']['type'];
     const moduleLanguage = russianLocale['module']['language'];
 
@@ -62,31 +46,31 @@ class Repository extends Component {
       <div className="repository-list">
         <div className="modules-search-input">
           <div className="input-group">
-            <input type="text" className="form-control" onChange={this.handleChange}
+            <input type="text" className="form-control" onChange={event => setQueryText(event.target.value)}
               placeholder="Поиск модулей..." aria-describedby="basic-addon" />
             <span className="input-group-addon" id="basic-addon">
               {filteredModules.length}
             </span>
             <div className="input-group-btn">
               <button type="button" className="btn btn-default dropdown-toggle" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
-                {moduleType[this.state.queryModuleType]} <span className="caret" />
+                {moduleType[queryModuleType]} <span className="caret" />
               </button>
               { /* eslint-disable jsx-a11y/anchor-is-valid */ }
               <ul className="dropdown-menu dropdown-menu-right">
                 <li>
-                  <a href="#" onClick={() => { this.dropdownClick(ModuleType.All)} }>Все модули</a>
+                  <a href="#" onClick={() => { dropdownClick(ModuleType.All)} }>Все модули</a>
                 </li>
                 <li>
-                  <a href="#" onClick={() => { this.dropdownClick(ModuleType.Bible)} }>Библия</a>
+                  <a href="#" onClick={() => { dropdownClick(ModuleType.Bible)} }>Библия</a>
                 </li>
                 <li>
-                  <a href="#" onClick={() => { this.dropdownClick(ModuleType.Commentary)} }>Комментарий</a>
+                  <a href="#" onClick={() => { dropdownClick(ModuleType.Commentary)} }>Комментарий</a>
                 </li>
                 <li>
-                  <a href="#" onClick={() => { this.dropdownClick(ModuleType.Dictionary)} }>Словарь</a>
+                  <a href="#" onClick={() => { dropdownClick(ModuleType.Dictionary)} }>Словарь</a>
                 </li>
                 <li>
-                  <a href="#" onClick={() => { this.dropdownClick(ModuleType.Book)} }>Книга</a>
+                  <a href="#" onClick={() => { dropdownClick(ModuleType.Book)} }>Книга</a>
                 </li>
               </ul>
               { /* eslint-enable jsx-a11y/anchor-is-valid */ }
@@ -105,7 +89,7 @@ class Repository extends Component {
                 <p>Версия: {getModuleMetadata(module.id).version}</p>
                 <p>
                   <a href={`https://raw.githubusercontent.com/BibleQuote/BibleQuote-Modules/master/modules/${module.id}.zip`}
-                    onClick={() => { this.downloadModuleClick(module.id)} } >
+                    onClick={() => { downloadModuleClick(module.id)} } >
                     Загрузить ({module.size})
                   </a>
                 </p>
@@ -119,50 +103,45 @@ class Repository extends Component {
         }
       </div>
     );
+  };
+
+  let filteredModules = [ ...modules ];
+
+  // filter by query text
+  if (queryText) {
+    filteredModules = [];
+    modules.forEach(module => {
+      const currentQueryText = queryText.toLowerCase();
+      const name = module.name.toLowerCase();
+      const author = module.author.toLowerCase();
+      if (name.includes(currentQueryText) || author.includes(currentQueryText)) {
+        filteredModules.push(module);
+      }
+    });
   }
 
-  render() {
-    const { modules } = this.state;
-    let filteredModules = [ ...modules ];
+  // filter by query module type
+  if (queryModuleType !== ModuleType.All) {
+    filteredModules = filteredModules.filter(module => (
+      getModuleMetadata(module.id).type === queryModuleType
+    ));
+  }
 
-    // filter by query text
-    if (this.state.queryText) {
-      filteredModules = [];
-      modules.forEach(module => {
-        const queryText = this.state.queryText.toLowerCase();
-        const name = module.name.toLowerCase();
-        const author = module.author.toLowerCase();
-        if (name.includes(queryText) || author.includes(queryText)) {
-          filteredModules.push(module);
-        }
-      });
-    }
-
-    // filter by query module type
-    if (this.state.queryModuleType !== ModuleType.All) {
-      const queryModuleType = this.state.queryModuleType;
-
-      filteredModules = filteredModules.filter(module => (
-        getModuleMetadata(module.id).type === queryModuleType
-      ));
-    }
-
-    return (
-      <div className="Repository">
-        <div className="parallax-small filter-gradient blue" data-color="blue">
-        </div>
-        <div className="section section-clients">
-          <div className="container text-center">
-            {
-              this.state.loaded
-              ? this.getModulesList(filteredModules)
+  return (
+    <div className="Repository">
+      <div className="parallax-small filter-gradient blue" data-color="blue">
+      </div>
+      <div className="section section-clients">
+        <div className="container text-center">
+          {
+            loaded
+              ? getModulesList(filteredModules)
               : <Loader type="Oval" color="#6994A2" width="70" />
-            }
-          </div>
+          }
         </div>
       </div>
-    );
-  }
+    </div>
+  );
 }
 
 export default Repository;
