@@ -35,7 +35,7 @@ const Tutorial = () => {
             videos.map((video, index) => (
               <div key={index}>
                 <h4>Урок {index + 1}: {video.title}</h4>
-                <YouTube videoId={video.videoId} opts={{}} />
+                <YouTube videoId={video.videoId} opts={{}} className="tutorial-video"/>
               </div>
             ))
           }
