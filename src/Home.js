@@ -4,9 +4,9 @@ import React, { Component } from 'react';
 import Parallax from './Parallax';
 import ModalImage from 'react-modal-image'
 
-const APP_VERSION = '7.3.0';
-const APP_BUILD = '800';
-const APP_SIZE = '72';
+const APP_VERSION = '7.4.0';
+const APP_BUILD = '810';
+const APP_SIZE = '83';
 
 class Home extends Component {
   constructor(props) {
