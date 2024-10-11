@@ -55,7 +55,6 @@ const Repository = () => {
               <button type="button" className="btn btn-default dropdown-toggle" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
                 {moduleType[queryModuleType]} <span className="caret" />
               </button>
-              { /* eslint-disable jsx-a11y/anchor-is-valid */ }
               <ul className="dropdown-menu dropdown-menu-right">
                 <li>
                   <a href="#" onClick={() => { dropdownClick(ModuleType.All)} }>Все модули</a>
@@ -73,7 +72,6 @@ const Repository = () => {
                   <a href="#" onClick={() => { dropdownClick(ModuleType.Book)} }>Книга</a>
                 </li>
               </ul>
-              { /* eslint-enable jsx-a11y/anchor-is-valid */ }
             </div>
           </div>
         </div>
