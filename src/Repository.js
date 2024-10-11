@@ -43,62 +43,77 @@ const Repository = () => {
     const moduleLanguage = russianLocale['module']['language'];
 
     return (
-      <div className="repository-list">
-        <div className="modules-search-input">
-          <div className="input-group">
-            <input type="text" className="form-control" onChange={event => setQueryText(event.target.value)}
-              placeholder="Поиск модулей..." aria-describedby="basic-addon" />
-            <span className="input-group-addon" id="basic-addon">
-              {filteredModules.length}
-            </span>
-            <div className="input-group-btn">
-              <button type="button" className="btn btn-default dropdown-toggle" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
-                {moduleType[queryModuleType]} <span className="caret" />
-              </button>
-              <ul className="dropdown-menu dropdown-menu-right">
-                <li>
-                  <a href="#" onClick={() => { dropdownClick(ModuleType.All)} }>Все модули</a>
-                </li>
-                <li>
-                  <a href="#" onClick={() => { dropdownClick(ModuleType.Bible)} }>Библия</a>
-                </li>
-                <li>
-                  <a href="#" onClick={() => { dropdownClick(ModuleType.Commentary)} }>Комментарий</a>
-                </li>
-                <li>
-                  <a href="#" onClick={() => { dropdownClick(ModuleType.Dictionary)} }>Словарь</a>
-                </li>
-                <li>
-                  <a href="#" onClick={() => { dropdownClick(ModuleType.Book)} }>Книга</a>
-                </li>
-              </ul>
+      <div>
+        <div className="section">
+          <div className="container">
+            <div className="row">
+              <div className="col-md-12">
+                <div className="description">
+                  <a href="https://www.teleios.bible">
+                    <img style={{ height: 'auto', maxWidth: '100%' }} src="assets/img/teleios/teleios-banner.png"  alt="Teleios Bible banner" />
+                  </a>
+                </div>
+              </div>
             </div>
           </div>
         </div>
-        <ul className="modules-list">
+        <div className="repository-list">
+          <div className="modules-search-input">
+            <div className="input-group">
+              <input type="text" className="form-control" onChange={event => setQueryText(event.target.value)}
+                placeholder="Поиск модулей..." aria-describedby="basic-addon" />
+              <span className="input-group-addon" id="basic-addon">
+                {filteredModules.length}
+              </span>
+              <div className="input-group-btn">
+                <button type="button" className="btn btn-default dropdown-toggle" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                  {moduleType[queryModuleType]} <span className="caret" />
+                </button>
+                <ul className="dropdown-menu dropdown-menu-right">
+                  <li>
+                    <a href="#" onClick={() => { dropdownClick(ModuleType.All)} }>Все модули</a>
+                  </li>
+                  <li>
+                    <a href="#" onClick={() => { dropdownClick(ModuleType.Bible)} }>Библия</a>
+                  </li>
+                  <li>
+                    <a href="#" onClick={() => { dropdownClick(ModuleType.Commentary)} }>Комментарий</a>
+                  </li>
+                  <li>
+                    <a href="#" onClick={() => { dropdownClick(ModuleType.Dictionary)} }>Словарь</a>
+                  </li>
+                  <li>
+                    <a href="#" onClick={() => { dropdownClick(ModuleType.Book)} }>Книга</a>
+                  </li>
+                </ul>
+              </div>
+            </div>
+          </div>
+          <ul className="modules-list">
+            {
+              filteredModules.map(module => (
+                <li key={module.id}>
+                  <img alt={module.id} src={`https://raw.githubusercontent.com/BibleQuote/BibleQuote-Modules/master/assets/${module.id}.jpg`} />
+                  <p><strong>{module.name}</strong></p>
+                  <p>Автор: {module.author}</p>
+                  <p>Тип: {moduleType[getModuleMetadata(module.id).type]}</p>
+                  <p>Язык: {moduleLanguage[getModuleMetadata(module.id).language]}</p>
+                  <p>Версия: {getModuleMetadata(module.id).version}</p>
+                  <p>
+                    <a href={`https://raw.githubusercontent.com/BibleQuote/BibleQuote-Modules/master/modules/${module.id}.zip`}
+                      onClick={() => { downloadModuleClick(module.id)} } >
+                      Загрузить ({module.size})
+                    </a>
+                  </p>
+                </li>
+              ))
+            }
+          </ul>
           {
-            filteredModules.map(module => (
-              <li key={module.id}>
-                <img alt={module.id} src={`https://raw.githubusercontent.com/BibleQuote/BibleQuote-Modules/master/assets/${module.id}.jpg`} />
-                <p><strong>{module.name}</strong></p>
-                <p>Автор: {module.author}</p>
-                <p>Тип: {moduleType[getModuleMetadata(module.id).type]}</p>
-                <p>Язык: {moduleLanguage[getModuleMetadata(module.id).language]}</p>
-                <p>Версия: {getModuleMetadata(module.id).version}</p>
-                <p>
-                  <a href={`https://raw.githubusercontent.com/BibleQuote/BibleQuote-Modules/master/modules/${module.id}.zip`}
-                    onClick={() => { downloadModuleClick(module.id)} } >
-                    Загрузить ({module.size})
-                  </a>
-                </p>
-              </li>
-            ))
+            filteredModules.length === 0 &&
+            <div>Таких модулей в нашем репозитории нет.</div>
           }
-        </ul>
-        {
-          filteredModules.length === 0 &&
-          <div>Таких модулей в нашем репозитории нет.</div>
-        }
+        </div>
       </div>
     );
   };

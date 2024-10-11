@@ -27,8 +27,20 @@ const Tutorial = () => {
 
   return (
     <div className="Tutorial">
-      <div className="parallax-small filter-gradient blue" data-color="blue">
-      </div>
+      <div className="parallax-small filter-gradient blue" data-color="blue" />
+      <div className="section section-gray">
+          <div className="container">
+            <div className="row">
+              <div className="col-md-12">
+                <div className="description">
+                  <a href="https://www.teleios.bible">
+                    <img style={{ height: 'auto', maxWidth: '100%' }} src="assets/img/teleios/teleios-banner.png"  alt="Teleios Bible banner" />
+                  </a>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
       <div className="section section-clients">
         <div className="container text-center">
           {
