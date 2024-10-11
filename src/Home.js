@@ -47,28 +47,19 @@ class Home extends Component {
             </div>
           </div>
         </div> */}
-        {/* <div className="section section-presentation">
+        <div className="section section-gray">
           <div className="container">
             <div className="row">
-              <div className="col-md-5 hidden-xs">
+              <div className="col-md-12">
                 <div className="description">
-                  <h4 className="header-text">It's beautiful</h4>
-                  <p>This pack is a demo of our latest product. You can download it and use it in any project of yours. By downloading the resource with a Personal License you are granted the use of it under the conditions featured in the above table. Ownership stays with Creative Tim, along with the copyright holders and you must abide the following rights and restrictions. </p>
-                  <p>Rights:</p>
-                  <p />
-                  <ol>
-                    <li>You have rights for royalty free use of our resources for your personal project.</li>
-                    <li>You may modify the resources according to your requirements and use them royalty free for your personal project. For example, you may include this resource in a website you will be designing for you. </li>
-                    <li>You are not required to attribute or link to <a href="http://www.creative-tim.com">Creative Tim</a> in project.</li>
-                  </ol>
+                  <a href="https://www.teleios.bible">
+                    <img style={{ height: 'auto', maxWidth: '100%' }} src="assets/img/teleios/teleios-banner.png"  alt="Teleios Bible banner" />
+                  </a>
                 </div>
-              </div>
-              <div className="col-md-6 ">
-                <img src="assets/img/showcases/showcase-2/mac2.png" style={{marginTop:'-50px'}}/>
               </div>
             </div>
           </div>
-        </div> */}
+        </div>
         <div id="features" className="section section-demo">
           <div className="container">
             <div className="row">
